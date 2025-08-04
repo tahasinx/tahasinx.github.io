@@ -257,7 +257,7 @@ a{
 	padding: 0px 20px;
 }
 .tokyo_tm_topbar .logo img{
-	max-width: 100px;
+	min-width: 200px;
 	max-height: 40px;
 }
 .tokyo_tm_topbar .logo h3{
