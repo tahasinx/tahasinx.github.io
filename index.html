@@ -6,7 +6,7 @@
     <meta name="description" content="Name of your web site">
     <meta name="author" content="Marketify">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+    <link rel="icon" href="img/slider/me.png" type="image/x-icon" />
     <title>Tahasin</title>
 
     <!-- STYLES -->
@@ -131,8 +131,15 @@
                     </ul>
                 </div>
                 <div class="copyright">
-                    <p>&copy; 2022 Tokyo<br>Created by <a href="https://themeforest.net/user/marketify"
-                            target="_blank">Marketify</a></p>
+                    <p>
+                        &copy; <span id="year"></span><br>
+                        Developed by
+                        <a href="https://github.com/tahasinx" target="_blank">Tahasinx</a>
+                    </p>
+
+                    <script>
+                        document.getElementById("year").textContent = new Date().getFullYear();
+                    </script>
                 </div>
             </div>
         </div>
@@ -149,7 +156,7 @@
                             <div class="home_content">
                                 <div class="avatar" data-type="wave">
                                     <!-- data-type values are: "wave", "circle", "square"-->
-                                    <div class="image" data-img-url="img/slider/me.jpg"></div>
+                                    <div class="image" data-img-url="img/slider/me.png"></div>
                                 </div>
                                 <div class="details">
                                     <h3 class="name">Tahasin <span>Islam</span></h3>
@@ -187,9 +194,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="top_author_image">
-                                <img src="img/slider/me.jpg" alt="" />
-                            </div>
+                            <!-- <div class="top_author_image" style="height: 100px;width: 100px;">
+                                <img src="img/slider/me.jpg" alt="" style="border-radius: 50%;"/>
+                            </div> -->
                             <div class="about_title">
                                 <h3>Tahasin Islam</h3>
                                 <span>Web Developer</span>
@@ -231,7 +238,7 @@
                                 </div>
                             </div>
                             <div class="tokyo_tm_button" data-position="left">
-                                <a href="img/cv/me.jpg" download>
+                                <a href="javascript:void(0);" download>
                                     <span>Download CV</span>
                                 </a>
                             </div>
@@ -458,7 +465,7 @@
                                             </div>
                                             <div class="details">
                                                 <div class="image">
-                                                    <div class="main" data-img-url="img/testimonials/me.jpg"></div>
+                                                    <div class="main" data-img-url="img/testimonials/me.png"></div>
                                                 </div>
                                                 <div class="info">
                                                     <h3>TRY SOLUTIONS LLC</h3>
@@ -536,7 +543,7 @@
                                             <a class="tokyo_tm_full_link" href="#"></a>
 
                                             <!-- Service Popup Start -->
-                                            <img class="popup_service_image" src="img/news/me.jpg" alt="" />
+                                            <img class="popup_service_image" src="img/news/me.png" alt="" />
                                             <div class="service_hidden_details">
                                                 <div class="service_popup_informations">
                                                     <div class="descriptions">
@@ -692,7 +699,7 @@
                                             <a class="tokyo_tm_full_link" href="#"></a>
 
                                             <!-- Service Popup Start -->
-                                            <img class="popup_service_image" src="img/news/me.jpg" alt="" />
+                                            <img class="popup_service_image" src="img/news/me.png" alt="" />
                                             <div class="service_hidden_details">
                                                 <div class="service_popup_informations">
                                                     <div class="descriptions">
@@ -974,7 +981,7 @@
                                             <div class="entry tokyo_tm_portfolio_animation_wrap"
                                                 data-title="Teresa Butler" data-category="Vimeo">
                                                 <a class="popup-vimeo" href="https://vimeo.com/337293658">
-                                                    <img src="img/thumbs/1-me.jpg" alt="" />
+                                                    <img src="img/thumbs/1-me.png" alt="" />
                                                     <div class="abs_image" data-img-url="img/portfolio/5.jpg"></div>
                                                 </a>
                                             </div>
@@ -986,7 +993,7 @@
                                                 data-title="Ashley Flores" data-category="Youtube">
                                                 <a class="popup-youtube"
                                                     href="https://www.youtube.com/watch?v=7e90gBu4pas">
-                                                    <img src="img/thumbs/1-me.jpg" alt="" />
+                                                    <img src="img/thumbs/1-me.png" alt="" />
                                                     <div class="abs_image" data-img-url="img/portfolio/6.jpg"></div>
                                                 </a>
                                             </div>
@@ -998,7 +1005,7 @@
                                                 data-title="Derek Smith" data-category="Soundcloud">
                                                 <a class="soundcloude_link mfp-iframe audio"
                                                     href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true">
-                                                    <img src="img/thumbs/1-me.jpg" alt="" />
+                                                    <img src="img/thumbs/1-me.png" alt="" />
                                                     <div class="abs_image" data-img-url="img/portfolio/4.jpg"></div>
                                                 </a>
                                             </div>
@@ -1009,7 +1016,7 @@
                                             <div class="entry tokyo_tm_portfolio_animation_wrap"
                                                 data-title="Gloria Jenkins" data-category="Image">
                                                 <a class="zoom" href="img/portfolio/3.jpg">
-                                                    <img src="img/thumbs/1-me.jpg" alt="" />
+                                                    <img src="img/thumbs/1-me.png" alt="" />
                                                     <div class="abs_image" data-img-url="img/portfolio/3.jpg"></div>
                                                 </a>
                                             </div>
@@ -1020,7 +1027,7 @@
                                             <div class="entry tokyo_tm_portfolio_animation_wrap"
                                                 data-title="Selena Gomez" data-category="Detail">
                                                 <a class="popup_info" href="#">
-                                                    <img src="img/thumbs/1-me.jpg" alt="" />
+                                                    <img src="img/thumbs/1-me.png" alt="" />
                                                     <div class="abs_image" data-img-url="img/portfolio/7.jpg"></div>
                                                 </a>
                                             </div>
@@ -1083,7 +1090,7 @@
                                                                 <div class="my_image">
                                                                     <img src="img/thumbs/4-2.jpg" alt="" />
                                                                     <div class="main"
-                                                                        data-img-url="img/portfolio/me.jpg"></div>
+                                                                        data-img-url="img/portfolio/me.png"></div>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -1117,7 +1124,7 @@
                                             <div class="entry tokyo_tm_portfolio_animation_wrap" data-title="Ave Simone"
                                                 data-category="Detail">
                                                 <a class="popup_info" href="#">
-                                                    <img src="img/thumbs/1-me.jpg" alt="" />
+                                                    <img src="img/thumbs/1-me.png" alt="" />
                                                     <div class="abs_image" data-img-url="img/portfolio/8.jpg"></div>
                                                 </a>
                                             </div>
@@ -1180,7 +1187,7 @@
                                                                 <div class="my_image">
                                                                     <img src="img/thumbs/4-2.jpg" alt="" />
                                                                     <div class="main"
-                                                                        data-img-url="img/portfolio/me.jpg"></div>
+                                                                        data-img-url="img/portfolio/me.png"></div>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -1233,7 +1240,7 @@
                                     <div class="list_inner">
                                         <div class="image">
                                             <img src="img/thumbs/40-25.jpg" alt="" />
-                                            <div class="main" data-img-url="img/news/me.jpg"></div>
+                                            <div class="main" data-img-url="img/news/me.png"></div>
                                             <a class="tokyo_tm_full_link" href="#"></a>
                                         </div>
                                         <div class="details">
