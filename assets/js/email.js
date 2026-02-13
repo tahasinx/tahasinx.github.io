@@ -10,7 +10,7 @@
 	// -------------------------------------------------------------------------
 	var EMAILJS_CONFIG = {
 		serviceID: "service_ct2nl5f",
-		templateID: "template_89bca4r",
+		templateID: "template_6i4i0mh",
 		publicKey: "sUBF6yboAM2cU0nk8",
 	};
 
@@ -23,6 +23,19 @@
 		turnstileErrorCode = code;
 		return true;
 	};
+
+	window.onTurnstileSuccess = function (token) {
+		// Required for invisible mode: Turnstile calls this when token is ready
+		if (typeof pendingTurnstileCallback === "function") {
+			if (pendingTurnstileInterval) clearInterval(pendingTurnstileInterval);
+			pendingTurnstileInterval = null;
+			pendingTurnstileCallback(token);
+			pendingTurnstileCallback = null;
+		}
+	};
+
+	var pendingTurnstileCallback = null;
+	var pendingTurnstileInterval = null;
 
 	function getTurnstileWidgetId() {
 		var el = document.querySelector(".contact_turnstile_wrap .cf-turnstile");
@@ -60,6 +73,16 @@
 		return key && key !== "YOUR_TURNSTILE_SITEKEY";
 	}
 
+	function runTurnstileExecute() {
+		var id = getTurnstileWidgetId();
+		if (!id || typeof turnstile === "undefined" || !turnstile.execute) return;
+		try {
+			turnstile.execute("#" + id);
+		} catch (e) {
+			console.error("Turnstile execute failed:", e);
+		}
+	}
+
 	function waitForTurnstile(callback) {
 		if (!isTurnstileConfigured()) {
 			callback(getTurnstileResponse());
@@ -70,11 +93,16 @@
 			callback(token);
 			return;
 		}
+		// Invisible mode: must call execute() to trigger challenge; token then appears via callback or response field
+		runTurnstileExecute();
+		pendingTurnstileCallback = callback;
 		var start = Date.now();
-		var interval = setInterval(function () {
+		pendingTurnstileInterval = setInterval(function () {
 			token = getTurnstileResponse();
 			if (token || Date.now() - start >= TURNSTILE_WAIT_MS) {
-				clearInterval(interval);
+				clearInterval(pendingTurnstileInterval);
+				pendingTurnstileInterval = null;
+				if (pendingTurnstileCallback === callback) pendingTurnstileCallback = null;
 				callback(token || "");
 			}
 		}, TURNSTILE_POLL_MS);
@@ -128,8 +156,8 @@
 				$btnSpan.text("Sending…");
 				emailjs
 					.send(EMAILJS_CONFIG.serviceID, EMAILJS_CONFIG.templateID, {
-						from_name: name,
-						reply_to: email,
+						name: name,
+						email: email,
 						message: message,
 					})
 					.then(
