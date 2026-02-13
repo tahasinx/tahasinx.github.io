@@ -243,6 +243,15 @@ body.dark .tokyo_tm_contact .fields .last textarea:focus{
 	border: 1px solid rgba(255,255,255,1);
 	color: #fff;
 }
+body.dark .tokyo_tm_contact .returnmessage .contact_success{
+	color: #81c784;
+}
+body.dark .tokyo_tm_contact .contact_error{
+	color: #ef9a9a;
+}
+body.dark .tokyo_tm_contact .contact_info_item:hover {
+	background: rgba(255, 255, 255, .06);
+}
 body.dark .tokyo_tm_news ul li .details{
 	background-color: #494b50;
 }

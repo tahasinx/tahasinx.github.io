@@ -461,39 +461,29 @@ function tokyo_tm_contact_form() {
 
 	"use strict";
 
+	function isValidEmail(email) {
+		var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		return re.test(String(email).trim());
+	}
+
 	jQuery(".contact_form #send_message").on('click', function () {
 
-		var name = jQuery(".contact_form #name").val();
-		var email = jQuery(".contact_form #email").val();
-		var message = jQuery(".contact_form #message").val();
-		var subject = jQuery(".contact_form #subject").val();
+		var name = jQuery(".contact_form #name").val().trim();
+		var email = jQuery(".contact_form #email").val().trim();
+		var message = jQuery(".contact_form #message").val().trim();
 		var success = jQuery(".contact_form .returnmessage").data('success');
 
-		jQuery(".contact_form .returnmessage").empty(); //To empty previous error/success message.
-		//checking for blank fields	
+		jQuery(".contact_form .returnmessage").empty();
+
 		if (name === '' || email === '' || message === '') {
-
 			jQuery('div.empty_notice').slideDown(500).delay(2000).slideUp(500);
-		}
-		else {
-			// Returns successful data submission message when the entered information is stored in database.
-			jQuery.post("modal/contact.html", { ajax_name: name, ajax_email: email, ajax_message: message, ajax_subject: subject }, function (data) {
-
-				jQuery(".contact_form .returnmessage").append(data);//Append returned message to message paragraph
-
-
-				if (jQuery(".contact_form .returnmessage span.contact_error").length) {
-					jQuery(".contact_form .returnmessage").slideDown(500).delay(2000).slideUp(500);
-				} else {
-					jQuery(".contact_form .returnmessage").append("<span class='contact_success'>" + success + "</span>");
-					jQuery(".contact_form .returnmessage").slideDown(500).delay(4000).slideUp(500);
-				}
-
-				if (data === "") {
-					jQuery("#contact_form")[0].reset();//To reset form fields on success
-				}
-
-			});
+		} else if (!isValidEmail(email)) {
+			jQuery(".contact_form .returnmessage").append("<span class='contact_error'>* Invalid email *</span>");
+			jQuery(".contact_form .returnmessage").slideDown(500).delay(2000).slideUp(500);
+		} else {
+			jQuery(".contact_form .returnmessage").append("<span class='contact_success'>" + success + "</span>");
+			jQuery(".contact_form .returnmessage").slideDown(500).delay(4000).slideUp(500);
+			jQuery("#contact_form")[0].reset();
 		}
 		return false;
 	});

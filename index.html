@@ -177,47 +177,58 @@
                 </div>
                 <!-- /HOME -->
 
-                <!-- ABOUT -->
+                <!-- ABOUT (same structure as Service: section > container > section_wrapper > content) -->
                 <div id="about" class="tokyo_tm_section">
                     <div class="container">
-                        <div class="tokyo_tm_about">
+                        <div class="tokyo_tm_about_section">
                             <header class="cv_section_header">
                                 <span class="cv_section_label">About</span>
                                 <h2 class="cv_section_title">Tahasin Islam</h2>
                                 <p class="cv_section_subtitle">CTO &amp; Senior Software Engineer</p>
                             </header>
-                            <div class="about_text">
-                                <p>Full-stack developer and CTO with deep expertise in building, deploying, and maintaining scalable, high-traffic web applications. I specialize in transforming ideas into production-ready platforms with modern, secure architectures—from real-time systems to ERP/CRM, automation, and telephony integrations.</p>
-                                <p>I lead cross-functional teams, align technology with business goals, and deliver solutions that exceed expectations. Strong in bilingual communication and collaboration with local and international stakeholders.</p>
-                            </div>
-                            <div class="tokyo_tm_short_info cv_short_info">
-                                <div class="left">
-                                    <div class="tokyo_tm_info">
-                                        <ul>
-                                            <li><span>Email</span><span><a href="mailto:tahasin.x@gmail.com">tahasin.x@gmail.com</a></span></li>
-                                            <li><span>Phone</span><span><a href="tel:+8801780602502">+880 1780 602502</a></span></li>
-                                        </ul>
+                            <nav class="about_tabs_nav" role="tablist" aria-label="About sections">
+                            <button type="button" class="about_tab_btn active" role="tab" aria-selected="true" aria-controls="tab-intro" data-tab="intro">About</button>
+                            <button type="button" class="about_tab_btn" role="tab" aria-selected="false" aria-controls="tab-education" data-tab="education">Education</button>
+                            <button type="button" class="about_tab_btn" role="tab" aria-selected="false" aria-controls="tab-experience" data-tab="experience">Experience</button>
+                            <button type="button" class="about_tab_btn" role="tab" aria-selected="false" aria-controls="tab-skills" data-tab="skills">Skills</button>
+                            <button type="button" class="about_tab_btn" role="tab" aria-selected="false" aria-controls="tab-awards" data-tab="awards">Awards</button>
+                        </nav>
+                        <div class="about_tabs_content">
+                            <div class="about_tab_panel active" id="tab-intro" role="tabpanel" aria-labelledby="tab-intro">
+                                <div class="tokyo_tm_about">
+                                    <div class="about_text text-justify">
+                                        <p>Full-stack developer and CTO with deep expertise in building, deploying, and maintaining scalable, high-traffic web applications. I specialize in transforming ideas into production-ready platforms with modern, secure architectures—from real-time systems to ERP/CRM, automation, and telephony integrations.</p>
+                                        <p>I lead cross-functional teams, align technology with business goals, and deliver solutions that exceed expectations. Strong in bilingual communication and collaboration with local and international stakeholders.</p>
+                                    </div>
+                                    <div class="tokyo_tm_short_info cv_short_info">
+                                        <div class="left">
+                                            <div class="tokyo_tm_info">
+                                                <ul>
+                                                    <li><span>Email</span><span><a href="mailto:tahasinislam.x@gmail.com">tahasinislam.x@gmail.com</a></span></li>
+                                                    <li><span>Phone</span><span><a href="tel:+8801780602502">+880 1780 602502</a></span></li>
+                                                    <li><span>LinkedIn</span><span><a href="https://linkedin.com/in/tahasinx" target="_blank" rel="noopener">linkedin.com/in/tahasinx</a></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="right">
+                                            <div class="tokyo_tm_info">
+                                                <ul>
+                                                    <li><span>Location</span><span>Dhaka, Bangladesh</span></li>
+                                                    <li><span>Degree</span><span>BSc CSE, National University</span></li>
+                                                    <li><span>Freelance</span><span>Available</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tokyo_tm_button" data-position="left">
+                                        <a href="javascript:void(0);" id="open_cv_modal" class="cv_download_btn" data-cv-url="assets/cv/CV%20%5B%20Tahasin%20Islam%20%5D.pdf"><span><i class="bi bi-file-earmark-pdf"></i> PREVIEW CV</span></a>
                                     </div>
                                 </div>
-                                <div class="right">
-                                    <div class="tokyo_tm_info">
-                                        <ul>
-                                            <li><span>Location</span><span>Dhaka, Bangladesh</span></li>
-                                            <li><span>Degree</span><span>BSc CSE, National University</span></li>
-                                            <li><span>Freelance</span><span>Available</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
-                            <div class="tokyo_tm_button" data-position="left">
-                                <a href="javascript:void(0);" download><span>Download CV</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tokyo_tm_resumebox cv_block">
+                            <div class="about_tab_panel" id="tab-education" role="tabpanel" hidden>
+                                <div class="tokyo_tm_resumebox cv_block cv_block_tab">
                         <div class="container">
-                            <h3 class="cv_block_title"><span class="cv_block_num">01</span> Education &amp; Training</h3>
+                            <h3 class="cv_block_title">Education &amp; Training</h3>
                             <div class="cv_timeline">
                                 <article class="cv_timeline_item">
                                     <div class="cv_timeline_head">
@@ -231,10 +242,11 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="tokyo_tm_resumebox cv_block cv_experience">
+                            </div>
+                            <div class="about_tab_panel" id="tab-experience" role="tabpanel" hidden>
+                                <div class="tokyo_tm_resumebox cv_block cv_experience cv_block_tab">
                         <div class="container">
-                            <h3 class="cv_block_title"><span class="cv_block_num">02</span> Work Experience</h3>
+                            <h3 class="cv_block_title">Work Experience</h3>
                             <div class="cv_timeline">
                                 <article class="cv_timeline_item cv_experience_item">
                                     <div class="cv_timeline_head">
@@ -296,10 +308,11 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="tokyo_tm_skillbox cv_block cv_skills_block">
+                            </div>
+                            <div class="about_tab_panel" id="tab-skills" role="tabpanel" hidden>
+                                <div class="tokyo_tm_skillbox cv_block cv_skills_block cv_block_tab">
                         <div class="container">
-                            <h3 class="cv_block_title"><span class="cv_block_num">03</span> Skills</h3>
+                            <h3 class="cv_block_title">Skills</h3>
                             <div class="cv_skills_grid">
                                 <div class="cv_skill_group">
                                     <h4>Core Engineering Stack</h4>
@@ -348,10 +361,11 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="tokyo_tm_testimonials cv_block cv_awards">
+                            </div>
+                            <div class="about_tab_panel" id="tab-awards" role="tabpanel" hidden>
+                                <div class="tokyo_tm_testimonials cv_block cv_awards cv_block_tab">
                         <div class="container">
-                            <h3 class="cv_block_title"><span class="cv_block_num">04</span> Awards &amp; Recognition</h3>
+                            <h3 class="cv_block_title">Awards &amp; Recognition</h3>
                             <div class="cv_award_list">
                                 <article class="cv_award_item">
                                     <div class="cv_award_badge">Task Master</div>
@@ -359,6 +373,10 @@
                                     <p class="cv_award_text">Recognized for consistently achieving 100% task success and demonstrating exceptional dedication in fulfilling responsibilities. Outstanding performance in delivering results with precision and commitment.</p>
                                 </article>
                             </div>
+                        </div>
+                    </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -594,7 +612,22 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="contact_info_block">
+                                <a href="mailto:tahasinislam.x@gmail.com" class="contact_info_item">
+                                    <span class="contact_info_icon"><i class="bi bi-envelope"></i></span>
+                                    <span class="contact_info_text">
+                                        <span class="contact_info_label">Email</span>
+                                        <span class="contact_info_value">tahasinislam.x@gmail.com</span>
+                                    </span>
+                                </a>
+                                <a href="https://linkedin.com/in/tahasinx" target="_blank" rel="noopener" class="contact_info_item">
+                                    <span class="contact_info_icon"><i class="bi bi-linkedin"></i></span>
+                                    <span class="contact_info_text">
+                                        <span class="contact_info_label">LinkedIn</span>
+                                        <span class="contact_info_value">linkedin.com/in/tahasinx</span>
+                                    </span>
+                                </a>
+                            </div>
                             <div class="fields">
                                 <form method="post" class="contact_form" id="contact_form" autocomplete="off">
                                     <div class="returnmessage"
@@ -606,7 +639,7 @@
                                                 <input id="name" type="text" placeholder="Name">
                                             </li>
                                             <li>
-                                                <input id="email" type="text" placeholder="Email">
+                                                <input id="email" type="email" placeholder="Email" autocomplete="email">
                                             </li>
                                         </ul>
                                     </div>
@@ -618,9 +651,6 @@
                                             <span>Send Message</span>
                                         </a>
                                     </div>
-
-                                    <!-- If you want to change mail address to yours, please open modal.php and go to line 4 -->
-
                                 </form>
                             </div>
                         </div>
@@ -643,6 +673,26 @@
             <span class="theme_float_icon moon"><i class="bi bi-moon-fill"></i></span>
         </button>
         <!-- /FLOATING THEME TOGGLE -->
+
+        <!-- CV PREVIEW MODAL (full-width) -->
+        <div id="cv_preview_modal" class="cv_preview_modal" aria-hidden="true">
+            <div class="cv_modal_overlay"></div>
+            <div class="cv_modal_box">
+                <header class="cv_modal_header">
+                    <span class="cv_modal_title">Resume</span>
+                    <button type="button" class="cv_modal_btn cv_modal_btn_close" id="cv_modal_close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                </header>
+                <div class="cv_modal_body">
+                    <iframe id="cv_preview_frame" title="CV Preview" src="about:blank"></iframe>
+                    <div id="cv_modal_fallback" class="cv_modal_fallback" style="display: none;">
+                        <p class="cv_modal_fallback_title">CV file not found</p>
+                        <p class="cv_modal_fallback_text">Add your PDF to <strong>assets/cv/CV [ Tahasin Islam ].pdf</strong> to see the preview here.</p>
+                        <p class="cv_modal_fallback_hint">Place your resume PDF in the <code>assets/cv</code> folder, then refresh the page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /CV PREVIEW MODAL -->
 
     </div>
     <!-- / WRAPPER ALL -->
@@ -679,6 +729,97 @@
                 img.style.backgroundImage = `url(${img.dataset.hover})`;
                 avatar.classList.add('avatar-revealed');
             }, 3000);
+        })();
+
+        (function initCvModal() {
+            var modal = document.getElementById('cv_preview_modal');
+            var openBtn = document.getElementById('open_cv_modal');
+            var closeBtn = document.getElementById('cv_modal_close');
+            var overlay = modal && modal.querySelector('.cv_modal_overlay');
+            var frame = document.getElementById('cv_preview_frame');
+            var fallback = document.getElementById('cv_modal_fallback');
+            var downloadBtn = document.getElementById('cv_modal_download');
+
+            if (!modal || !openBtn || !frame) return;
+
+            var cvUrl = openBtn.getAttribute('data-cv-url') || 'assets/cv/CV%20%5B%20Tahasin%20Islam%20%5D.pdf';
+            var fullCvUrl = cvUrl.indexOf('http') === 0 ? cvUrl : (function () {
+                try { return new URL(cvUrl, window.location.href).href; } catch (e) { return cvUrl; }
+            })();
+
+            function showPreview() {
+                if (fallback) fallback.style.display = 'none';
+                frame.style.display = 'block';
+                frame.setAttribute('src', cvUrl);
+            }
+
+            function showFallback() {
+                frame.style.display = 'none';
+                frame.setAttribute('src', 'about:blank');
+                if (fallback) fallback.style.display = 'flex';
+            }
+
+            function openModal() {
+                if (downloadBtn) {
+                    downloadBtn.setAttribute('href', cvUrl);
+                    downloadBtn.setAttribute('download', 'Tahasin_Islam_CV.pdf');
+                }
+                modal.classList.add('opened');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                showFallback();
+                fetch(fullCvUrl, { method: 'HEAD' })
+                    .then(function (r) {
+                        if (r.ok) showPreview();
+                        else showFallback();
+                    })
+                    .catch(function () { showFallback(); });
+            }
+
+            function closeModal() {
+                modal.classList.remove('opened');
+                modal.setAttribute('aria-hidden', 'true');
+                frame.setAttribute('src', 'about:blank');
+                if (fallback) fallback.style.display = 'none';
+                frame.style.display = 'block';
+                document.body.style.overflow = '';
+            }
+
+            openBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                openModal();
+            });
+            if (closeBtn) closeBtn.addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
+            if (overlay) overlay.addEventListener('click', closeModal);
+            modal.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeModal();
+            });
+        })();
+
+        (function initAboutTabs() {
+            var nav = document.querySelector('.about_tabs_nav');
+            if (!nav) return;
+            var buttons = nav.querySelectorAll('.about_tab_btn');
+            var panels = document.querySelectorAll('.about_tab_panel');
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var tab = this.getAttribute('data-tab');
+                    var panel = document.getElementById('tab-' + tab);
+                    if (!panel) return;
+                    buttons.forEach(function (b) {
+                        b.classList.remove('active');
+                        b.setAttribute('aria-selected', 'false');
+                    });
+                    panels.forEach(function (p) {
+                        p.classList.remove('active');
+                        p.setAttribute('hidden', '');
+                    });
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+                    panel.classList.add('active');
+                    panel.removeAttribute('hidden');
+                });
+            });
         })();
 
     </script>
