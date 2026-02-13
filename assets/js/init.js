@@ -458,35 +458,7 @@ function tokyo_tm_data_images() {
 // -----------------------------------------------------
 
 function tokyo_tm_contact_form() {
-
-	"use strict";
-
-	function isValidEmail(email) {
-		var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		return re.test(String(email).trim());
-	}
-
-	jQuery(".contact_form #send_message").on('click', function () {
-
-		var name = jQuery(".contact_form #name").val().trim();
-		var email = jQuery(".contact_form #email").val().trim();
-		var message = jQuery(".contact_form #message").val().trim();
-		var success = jQuery(".contact_form .returnmessage").data('success');
-
-		jQuery(".contact_form .returnmessage").empty();
-
-		if (name === '' || email === '' || message === '') {
-			jQuery('div.empty_notice').slideDown(500).delay(2000).slideUp(500);
-		} else if (!isValidEmail(email)) {
-			jQuery(".contact_form .returnmessage").append("<span class='contact_error'>* Invalid email *</span>");
-			jQuery(".contact_form .returnmessage").slideDown(500).delay(2000).slideUp(500);
-		} else {
-			jQuery(".contact_form .returnmessage").append("<span class='contact_success'>" + success + "</span>");
-			jQuery(".contact_form .returnmessage").slideDown(500).delay(4000).slideUp(500);
-			jQuery("#contact_form")[0].reset();
-		}
-		return false;
-	});
+	// Contact form is handled by assets/js/email.js (EmailJS)
 }
 
 // -----------------------------------------------------

@@ -3327,7 +3327,6 @@ body.modal {
 	gap            : 12px;
 	margin-bottom  : 40px;
 	width          : 100%;
-	justify-content: flex-start;
 }
 
 .tokyo_tm_contact .contact_info_item {
@@ -3342,12 +3341,17 @@ body.modal {
 	color           : inherit;
 	transition      : background .2s ease, border-color .2s ease;
 	min-width       : 0;
-	flex            : 1 1 200px;
-	max-width       : 280px;
+	flex            : 1 1 calc((100% - 24px) / 3);
 }
 
 .tokyo_tm_contact .contact_info_item:hover {
 	background : rgba(0, 0, 0, .04);
+}
+
+@media (max-width: 640px) {
+	.tokyo_tm_contact .contact_info_item {
+		flex: 1 1 100%;
+	}
 }
 
 .tokyo_tm_contact .contact_info_icon {
@@ -3397,6 +3401,11 @@ body.modal {
 	clear        : both;
 	float        : left;
 	margin-bottom: 50px;
+}
+
+.tokyo_tm_contact .contact_turnstile_wrap {
+	margin-bottom : 16px;
+	min-height    : 1px;
 }
 
 .tokyo_tm_contact .fields {
