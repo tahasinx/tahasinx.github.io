@@ -136,7 +136,7 @@
                     <div class="container">
                         <div class="tokyo_tm_home">
                             <div class="home_content">
-                                <div class="avatar" data-type="wave">
+                                <div class="avatar" data-type="wave" id="profile-avatar">
                                     <!-- data-type values are: "wave", "circle", "square"-->
                                     <div class="image" data-img-url="assets/img/slider/me.png"
                                         data-default="assets/img/slider/me.png" data-hover="assets/img/slider/me.jpg">
@@ -734,17 +734,20 @@
             loop: true
         });
 
-        document.querySelectorAll('.image').forEach(img => {
+        (function initProfileAvatar() {
+            const avatar = document.getElementById('profile-avatar');
+            const img = document.querySelector('#profile-avatar .image');
+            if (!avatar || !img) return;
+
+            // Show curtain image (data-default) from the start
             img.style.backgroundImage = `url(${img.dataset.default})`;
 
-            img.addEventListener('mouseover', () => {
+            // After 3 seconds: swap to the real photo with a modern "creation" animation
+            setTimeout(function () {
                 img.style.backgroundImage = `url(${img.dataset.hover})`;
-            });
-
-            img.addEventListener('mouseout', () => {
-                img.style.backgroundImage = `url(${img.dataset.default})`;
-            });
-        });
+                avatar.classList.add('avatar-revealed');
+            }, 3000);
+        })();
 
     </script>
 </body>
