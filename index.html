@@ -6,6 +6,8 @@
     <meta name="description" content="Name of your web site">
     <meta name="author" content="Marketify">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com 'unsafe-inline'; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self' https://api.emailjs.com https://challenges.cloudflare.com https://cdnjs.cloudflare.com;">
     <link rel="icon" href="assets/img/slider/me.png" type="image/x-icon" />
 
     <title>Hi! I'm Tahasin</title>
@@ -99,7 +101,8 @@
                 </ul>
             </nav>
             <div class="mobile_menu_footer">
-                <p>&copy; <span id="year_mobile"></span> <a href="https://github.com/tahasinx" target="_blank">Tahasinx</a></p>
+                <p>&copy; <span id="year_mobile"></span> <a href="https://github.com/tahasinx"
+                        target="_blank">Tahasinx</a></p>
                 <script>document.getElementById("year_mobile").textContent = new Date().getFullYear();</script>
             </div>
         </div>
@@ -125,7 +128,8 @@
                     </ul>
                 </nav>
                 <div class="copyright">
-                    <p>&copy; <span id="year"></span> <a href="https://github.com/tahasinx" target="_blank">Tahasinx</a></p>
+                    <p>&copy; <span id="year"></span> <a href="https://github.com/tahasinx" target="_blank">Tahasinx</a>
+                    </p>
                     <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
                 </div>
             </div>
@@ -187,196 +191,280 @@
                                 <p class="cv_section_subtitle">CTO &amp; Senior Software Engineer</p>
                             </header>
                             <nav class="about_tabs_nav" role="tablist" aria-label="About sections">
-                            <button type="button" class="about_tab_btn active" role="tab" aria-selected="true" aria-controls="tab-intro" data-tab="intro">About</button>
-                            <button type="button" class="about_tab_btn" role="tab" aria-selected="false" aria-controls="tab-education" data-tab="education">Education</button>
-                            <button type="button" class="about_tab_btn" role="tab" aria-selected="false" aria-controls="tab-experience" data-tab="experience">Experience</button>
-                            <button type="button" class="about_tab_btn" role="tab" aria-selected="false" aria-controls="tab-skills" data-tab="skills">Skills</button>
-                            <button type="button" class="about_tab_btn" role="tab" aria-selected="false" aria-controls="tab-awards" data-tab="awards">Awards</button>
-                        </nav>
-                        <div class="about_tabs_content">
-                            <div class="about_tab_panel active" id="tab-intro" role="tabpanel" aria-labelledby="tab-intro">
-                                <div class="tokyo_tm_about">
-                                    <div class="about_text text-justify">
-                                        <p>Full-stack developer and CTO with deep expertise in building, deploying, and maintaining scalable, high-traffic web applications. I specialize in transforming ideas into production-ready platforms with modern, secure architectures—from real-time systems to ERP/CRM, automation, and telephony integrations.</p>
-                                        <p>I lead cross-functional teams, align technology with business goals, and deliver solutions that exceed expectations. Strong in bilingual communication and collaboration with local and international stakeholders.</p>
-                                    </div>
-                                    <div class="tokyo_tm_short_info cv_short_info">
-                                        <div class="left">
-                                            <div class="tokyo_tm_info">
-                                                <ul>
-                                                    <li><span>Email</span><span><a href="mailto:tahasinislam.x@gmail.com">tahasinislam.x@gmail.com</a></span></li>
-                                                    <li><span>Phone</span><span><a href="tel:+8801780602502">+880 1780 602502</a></span></li>
-                                                    <li><span>LinkedIn</span><span><a href="https://linkedin.com/in/tahasinx" target="_blank" rel="noopener">linkedin.com/in/tahasinx</a></span></li>
-                                                </ul>
+                                <button type="button" class="about_tab_btn active" role="tab" aria-selected="true"
+                                    aria-controls="tab-intro" data-tab="intro">About</button>
+                                <button type="button" class="about_tab_btn" role="tab" aria-selected="false"
+                                    aria-controls="tab-education" data-tab="education">Education</button>
+                                <button type="button" class="about_tab_btn" role="tab" aria-selected="false"
+                                    aria-controls="tab-experience" data-tab="experience">Experience</button>
+                                <button type="button" class="about_tab_btn" role="tab" aria-selected="false"
+                                    aria-controls="tab-skills" data-tab="skills">Skills</button>
+                                <button type="button" class="about_tab_btn" role="tab" aria-selected="false"
+                                    aria-controls="tab-awards" data-tab="awards">Awards</button>
+                            </nav>
+                            <div class="about_tabs_content">
+                                <div class="about_tab_panel active" id="tab-intro" role="tabpanel"
+                                    aria-labelledby="tab-intro">
+                                    <div class="tokyo_tm_about">
+                                        <div class="about_text text-justify">
+                                            <p>Full-stack developer and CTO with deep expertise in building, deploying,
+                                                and maintaining scalable, high-traffic web applications. I specialize in
+                                                transforming ideas into production-ready platforms with modern, secure
+                                                architectures—from real-time systems to ERP/CRM, automation, and
+                                                telephony integrations.</p>
+                                            <p>I lead cross-functional teams, align technology with business goals, and
+                                                deliver solutions that exceed expectations. Strong in bilingual
+                                                communication and collaboration with local and international
+                                                stakeholders.</p>
+                                        </div>
+                                        <div class="tokyo_tm_short_info cv_short_info">
+                                            <div class="left">
+                                                <div class="tokyo_tm_info">
+                                                    <ul>
+                                                        <li><span>Email</span><span><a
+                                                                    href="mailto:tahasinislam.x@gmail.com">tahasinislam.x@gmail.com</a></span>
+                                                        </li>
+                                                        <li><span>Phone</span><span><a href="tel:+8801780602502">+880
+                                                                    1780 602502</a></span></li>
+                                                        <li><span>LinkedIn</span><span><a
+                                                                    href="https://linkedin.com/in/tahasinx"
+                                                                    target="_blank"
+                                                                    rel="noopener">linkedin.com/in/tahasinx</a></span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <div class="tokyo_tm_info">
+                                                    <ul>
+                                                        <li><span>Location</span><span>Dhaka, Bangladesh</span></li>
+                                                        <li><span>Degree</span><span>BSc CSE, National University</span>
+                                                        </li>
+                                                        <li><span>Freelance</span><span>Available</span></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="right">
-                                            <div class="tokyo_tm_info">
-                                                <ul>
-                                                    <li><span>Location</span><span>Dhaka, Bangladesh</span></li>
-                                                    <li><span>Degree</span><span>BSc CSE, National University</span></li>
-                                                    <li><span>Freelance</span><span>Available</span></li>
-                                                </ul>
+                                        <div class="tokyo_tm_button" data-position="left">
+                                            <a href="javascript:void(0);" id="open_cv_modal" class="cv_download_btn"
+                                                data-cv-url="assets/cv/CV%20%5B%20Tahasin%20Islam%20%5D.pdf"><span><i
+                                                        class="bi bi-file-earmark-pdf"></i> PREVIEW CV</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about_tab_panel" id="tab-education" role="tabpanel" hidden>
+                                    <div class="tokyo_tm_resumebox cv_block cv_block_tab">
+                                        <div class="container">
+                                            <h3 class="cv_block_title">Education &amp; Training</h3>
+                                            <div class="cv_timeline">
+                                                <article class="cv_timeline_item">
+                                                    <div class="cv_timeline_head">
+                                                        <span class="cv_timeline_date">Jun 2015 – Oct 2019</span>
+                                                        <span class="cv_timeline_location">Dhaka, Bangladesh</span>
+                                                    </div>
+                                                    <h4 class="cv_timeline_heading">BSc in Computer Science &amp;
+                                                        Engineering [CSE]</h4>
+                                                    <p class="cv_timeline_org">National University, Bangladesh</p>
+                                                    <p class="cv_timeline_desc">Programming, data structures and
+                                                        algorithms, database management (SQL), web application
+                                                        development, software design and development, operating systems,
+                                                        computer networks, debugging, and problem-solving skills.</p>
+                                                </article>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tokyo_tm_button" data-position="left">
-                                        <a href="javascript:void(0);" id="open_cv_modal" class="cv_download_btn" data-cv-url="assets/cv/CV%20%5B%20Tahasin%20Islam%20%5D.pdf"><span><i class="bi bi-file-earmark-pdf"></i> PREVIEW CV</span></a>
+                                </div>
+                                <div class="about_tab_panel" id="tab-experience" role="tabpanel" hidden>
+                                    <div class="tokyo_tm_resumebox cv_block cv_experience cv_block_tab">
+                                        <div class="container">
+                                            <h3 class="cv_block_title">Work Experience</h3>
+                                            <div class="cv_timeline">
+                                                <article class="cv_timeline_item cv_experience_item">
+                                                    <div class="cv_timeline_head">
+                                                        <span class="cv_timeline_date">Oct 2020 – Present</span>
+                                                        <span class="cv_timeline_location">Dhaka, Bangladesh</span>
+                                                    </div>
+                                                    <h4 class="cv_timeline_heading">CTO &amp; Senior Software Engineer
+                                                    </h4>
+                                                    <p class="cv_timeline_org">
+                                                        <a href="https://trysolutions.us" target="_blank"
+                                                            rel="noopener">TRY SOLUTIONS LLC</a>
+                                                        <span class="cv_org_meta">support@trysolutions.us ·
+                                                            trysolutions.us</span>
+                                                    </p>
+                                                    <ul class="cv_bullets">
+                                                        <li>Led full-stack development of ERP, CRM, POS, and automation
+                                                            platforms serving 200–300 business clients.</li>
+                                                        <li>Managed a team of 5–8 developers, overseeing frontend,
+                                                            backend, Graphics, QA, and DevOps workflows.</li>
+                                                        <li>Designed and deployed cloud infrastructure using AWS S3,
+                                                            Cloud VMs, Docker, and Linux servers.</li>
+                                                        <li>Designed secure authentication and RBAC (JWT, OAuth2, API
+                                                            tokens), reducing incidents by 90%.</li>
+                                                        <li>Optimized MySQL/PostgreSQL databases for high concurrency,
+                                                            improving query performance by 30%.</li>
+                                                        <li>Built real-time systems using WebSocket and WebRTC for
+                                                            instant communication platforms.</li>
+                                                        <li>Integrated payment gateways, Twilio API, Google APIs, and
+                                                            third-party enterprise services.</li>
+                                                        <li>Implemented automation modules and queue workers, reducing
+                                                            manual workload by 40%.</li>
+                                                        <li>Established Git workflows, CI/CD pipelines, and structured
+                                                            development standards for distributed teams.</li>
+                                                        <li>Collaborated with international stakeholders to deliver
+                                                            scalable, production-ready solutions.</li>
+                                                    </ul>
+                                                </article>
+                                                <article class="cv_timeline_item cv_experience_item">
+                                                    <div class="cv_timeline_head">
+                                                        <span class="cv_timeline_date">Mar 2017 – Aug 2020</span>
+                                                        <span class="cv_timeline_location">Dhaka, Bangladesh</span>
+                                                    </div>
+                                                    <h4 class="cv_timeline_heading">Software Developer</h4>
+                                                    <p class="cv_timeline_org">
+                                                        <a href="https://skynetbd.net" target="_blank"
+                                                            rel="noopener">SKYNET BD</a>
+                                                        <span class="cv_org_meta">admin@skynetbd.net ·
+                                                            skynetbd.net</span>
+                                                    </p>
+                                                    <ul class="cv_bullets">
+                                                        <li>Developed and maintained ISP billing and network management
+                                                            systems serving 1500–2000 customers.</li>
+                                                        <li>Collaborated with a team of 3–5 developers and operations
+                                                            staff to ensure stable deployments.</li>
+                                                        <li>Automated operational workflows, reducing manual processes
+                                                            by 35%.</li>
+                                                        <li>Built RESTful APIs, dashboards, and real-time monitoring
+                                                            tools for operational decision-making.</li>
+                                                        <li>Optimized server performance and database queries, improving
+                                                            application stability and response times.</li>
+                                                        <li>Strengthened system security through input validation,
+                                                            authentication controls, and role-based access policies.
+                                                        </li>
+                                                    </ul>
+                                                </article>
+                                                <article class="cv_timeline_item cv_experience_item">
+                                                    <div class="cv_timeline_head">
+                                                        <span class="cv_timeline_date">Jan 2016 – Feb 2017</span>
+                                                        <span class="cv_timeline_location">Dhaka, Bangladesh</span>
+                                                    </div>
+                                                    <h4 class="cv_timeline_heading">Software Developer [Fresher]</h4>
+                                                    <p class="cv_timeline_org">NEWZENTECH</p>
+                                                    <ul class="cv_bullets">
+                                                        <li>Contributed to full-stack web application development using
+                                                            PHP, SQL, HTML, CSS, and JavaScript.</li>
+                                                        <li>Assisted in implementing MVC architecture for modular and
+                                                            maintainable applications.</li>
+                                                        <li>Participated in debugging, testing, and deployment cycles
+                                                            with zero downtime.</li>
+                                                        <li>Developed responsive UI components and reusable frontend
+                                                            elements.</li>
+                                                        <li>Gained hands-on experience with Git version control and
+                                                            collaborative development workflows.</li>
+                                                    </ul>
+                                                </article>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about_tab_panel" id="tab-skills" role="tabpanel" hidden>
+                                    <div class="tokyo_tm_skillbox cv_block cv_skills_block cv_block_tab">
+                                        <div class="container">
+                                            <h3 class="cv_block_title">Skills</h3>
+                                            <div class="cv_skills_grid">
+                                                <div class="cv_skill_group">
+                                                    <h4>Core Engineering Stack</h4>
+                                                    <div class="cv_skill_tags"><span>PHP (OOP,
+                                                            PDO)</span><span>JavaScript
+                                                            (ES6+)</span><span>TypeScript</span><span>SQL</span></div>
+                                                </div>
+                                                <div class="cv_skill_group">
+                                                    <h4>Backend Architecture</h4>
+                                                    <div class="cv_skill_tags"><span>Laravel</span><span>Node.js
+                                                            (Express)</span><span>RESTful
+                                                            API</span><span>GraphQL</span><span>WebSocket</span><span>MVC</span><span>Repository
+                                                            Pattern</span></div>
+                                                </div>
+                                                <div class="cv_skill_group">
+                                                    <h4>Frontend Engineering</h4>
+                                                    <div class="cv_skill_tags">
+                                                        <span>Vue.js</span><span>React.js</span><span>Next.js</span><span>SASS/SCSS</span><span>Tailwind
+                                                            CSS</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cv_skill_group">
+                                                    <h4>Data &amp; Persistence</h4>
+                                                    <div class="cv_skill_tags">
+                                                        <span>MySQL</span><span>PostgreSQL</span><span>Query
+                                                            Optimization</span><span>Indexing</span><span>Concurrency</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cv_skill_group">
+                                                    <h4>Cloud &amp; Infrastructure</h4>
+                                                    <div class="cv_skill_tags"><span>AWS S3</span><span>Cloud
+                                                            VMs</span><span>Docker</span><span>Linux</span><span>CI/CD</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cv_skill_group">
+                                                    <h4>Security &amp; Reliability</h4>
+                                                    <div class="cv_skill_tags">
+                                                        <span>JWT</span><span>OAuth2</span><span>RBAC</span><span>CSRF/XSS
+                                                            Mitigation</span><span>Rate Limiting</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cv_skill_group">
+                                                    <h4>Real-Time &amp; Distributed</h4>
+                                                    <div class="cv_skill_tags">
+                                                        <span>WebRTC</span><span>Socket.io</span><span>Event-Driven</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cv_skill_group">
+                                                    <h4>Systems Integration</h4>
+                                                    <div class="cv_skill_tags"><span>Payment Gateways</span><span>Google
+                                                            APIs</span><span>Webhooks</span><span>API-Oriented</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cv_skill_group">
+                                                    <h4>Engineering Practices</h4>
+                                                    <div class="cv_skill_tags"><span>Scalable
+                                                            Design</span><span>API-First</span><span>Secure
+                                                            Coding</span><span>Code
+                                                            Review</span><span>Agile</span><span>Remote Teams</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cv_skill_group">
+                                                    <h4>Cross-Platform</h4>
+                                                    <div class="cv_skill_tags">
+                                                        <span>Electron.js</span><span>Flutter</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cv_skill_group">
+                                                    <h4>Communication</h4>
+                                                    <div class="cv_skill_tags"><span>Bilingual</span><span>Proficient in
+                                                            English</span><span>Client Communication</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about_tab_panel" id="tab-awards" role="tabpanel" hidden>
+                                    <div class="tokyo_tm_testimonials cv_block cv_awards cv_block_tab">
+                                        <div class="container">
+                                            <h3 class="cv_block_title">Awards &amp; Recognition</h3>
+                                            <div class="cv_award_list">
+                                                <article class="cv_award_item">
+                                                    <div class="cv_award_badge">Task Master</div>
+                                                    <p class="cv_award_org">TRY SOLUTIONS LLC</p>
+                                                    <p class="cv_award_text">Recognized for consistently achieving 100%
+                                                        task success and demonstrating exceptional dedication in
+                                                        fulfilling responsibilities. Outstanding performance in
+                                                        delivering results with precision and commitment.</p>
+                                                </article>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="about_tab_panel" id="tab-education" role="tabpanel" hidden>
-                                <div class="tokyo_tm_resumebox cv_block cv_block_tab">
-                        <div class="container">
-                            <h3 class="cv_block_title">Education &amp; Training</h3>
-                            <div class="cv_timeline">
-                                <article class="cv_timeline_item">
-                                    <div class="cv_timeline_head">
-                                        <span class="cv_timeline_date">Jun 2015 – Oct 2019</span>
-                                        <span class="cv_timeline_location">Dhaka, Bangladesh</span>
-                                    </div>
-                                    <h4 class="cv_timeline_heading">BSc in Computer Science &amp; Engineering [CSE]</h4>
-                                    <p class="cv_timeline_org">National University, Bangladesh</p>
-                                    <p class="cv_timeline_desc">Programming, data structures and algorithms, database management (SQL), web application development, software design and development, operating systems, computer networks, debugging, and problem-solving skills.</p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                            </div>
-                            <div class="about_tab_panel" id="tab-experience" role="tabpanel" hidden>
-                                <div class="tokyo_tm_resumebox cv_block cv_experience cv_block_tab">
-                        <div class="container">
-                            <h3 class="cv_block_title">Work Experience</h3>
-                            <div class="cv_timeline">
-                                <article class="cv_timeline_item cv_experience_item">
-                                    <div class="cv_timeline_head">
-                                        <span class="cv_timeline_date">Oct 2020 – Present</span>
-                                        <span class="cv_timeline_location">Dhaka, Bangladesh</span>
-                                    </div>
-                                    <h4 class="cv_timeline_heading">CTO &amp; Senior Software Engineer</h4>
-                                    <p class="cv_timeline_org">
-                                        <a href="https://trysolutions.us" target="_blank" rel="noopener">TRY SOLUTIONS LLC</a>
-                                        <span class="cv_org_meta">support@trysolutions.us · trysolutions.us</span>
-                                    </p>
-                                    <ul class="cv_bullets">
-                                        <li>Led full-stack development of ERP, CRM, POS, and automation platforms serving 200–300 business clients.</li>
-                                        <li>Managed a team of 5–8 developers, overseeing frontend, backend, Graphics, QA, and DevOps workflows.</li>
-                                        <li>Designed and deployed cloud infrastructure using AWS S3, Cloud VMs, Docker, and Linux servers.</li>
-                                        <li>Designed secure authentication and RBAC (JWT, OAuth2, API tokens), reducing incidents by 90%.</li>
-                                        <li>Optimized MySQL/PostgreSQL databases for high concurrency, improving query performance by 30%.</li>
-                                        <li>Built real-time systems using WebSocket and WebRTC for instant communication platforms.</li>
-                                        <li>Integrated payment gateways, Twilio API, Google APIs, and third-party enterprise services.</li>
-                                        <li>Implemented automation modules and queue workers, reducing manual workload by 40%.</li>
-                                        <li>Established Git workflows, CI/CD pipelines, and structured development standards for distributed teams.</li>
-                                        <li>Collaborated with international stakeholders to deliver scalable, production-ready solutions.</li>
-                                    </ul>
-                                </article>
-                                <article class="cv_timeline_item cv_experience_item">
-                                    <div class="cv_timeline_head">
-                                        <span class="cv_timeline_date">Mar 2017 – Aug 2020</span>
-                                        <span class="cv_timeline_location">Dhaka, Bangladesh</span>
-                                    </div>
-                                    <h4 class="cv_timeline_heading">Software Developer</h4>
-                                    <p class="cv_timeline_org">
-                                        <a href="https://skynetbd.net" target="_blank" rel="noopener">SKYNET BD</a>
-                                        <span class="cv_org_meta">admin@skynetbd.net · skynetbd.net</span>
-                                    </p>
-                                    <ul class="cv_bullets">
-                                        <li>Developed and maintained ISP billing and network management systems serving 1500–2000 customers.</li>
-                                        <li>Collaborated with a team of 3–5 developers and operations staff to ensure stable deployments.</li>
-                                        <li>Automated operational workflows, reducing manual processes by 35%.</li>
-                                        <li>Built RESTful APIs, dashboards, and real-time monitoring tools for operational decision-making.</li>
-                                        <li>Optimized server performance and database queries, improving application stability and response times.</li>
-                                        <li>Strengthened system security through input validation, authentication controls, and role-based access policies.</li>
-                                    </ul>
-                                </article>
-                                <article class="cv_timeline_item cv_experience_item">
-                                    <div class="cv_timeline_head">
-                                        <span class="cv_timeline_date">Jan 2016 – Feb 2017</span>
-                                        <span class="cv_timeline_location">Dhaka, Bangladesh</span>
-                                    </div>
-                                    <h4 class="cv_timeline_heading">Software Developer [Fresher]</h4>
-                                    <p class="cv_timeline_org">NEWZENTECH</p>
-                                    <ul class="cv_bullets">
-                                        <li>Contributed to full-stack web application development using PHP, SQL, HTML, CSS, and JavaScript.</li>
-                                        <li>Assisted in implementing MVC architecture for modular and maintainable applications.</li>
-                                        <li>Participated in debugging, testing, and deployment cycles with zero downtime.</li>
-                                        <li>Developed responsive UI components and reusable frontend elements.</li>
-                                        <li>Gained hands-on experience with Git version control and collaborative development workflows.</li>
-                                    </ul>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                            </div>
-                            <div class="about_tab_panel" id="tab-skills" role="tabpanel" hidden>
-                                <div class="tokyo_tm_skillbox cv_block cv_skills_block cv_block_tab">
-                        <div class="container">
-                            <h3 class="cv_block_title">Skills</h3>
-                            <div class="cv_skills_grid">
-                                <div class="cv_skill_group">
-                                    <h4>Core Engineering Stack</h4>
-                                    <div class="cv_skill_tags"><span>PHP (OOP, PDO)</span><span>JavaScript (ES6+)</span><span>TypeScript</span><span>SQL</span></div>
-                                </div>
-                                <div class="cv_skill_group">
-                                    <h4>Backend Architecture</h4>
-                                    <div class="cv_skill_tags"><span>Laravel</span><span>Node.js (Express)</span><span>RESTful API</span><span>GraphQL</span><span>WebSocket</span><span>MVC</span><span>Repository Pattern</span></div>
-                                </div>
-                                <div class="cv_skill_group">
-                                    <h4>Frontend Engineering</h4>
-                                    <div class="cv_skill_tags"><span>Vue.js</span><span>React.js</span><span>Next.js</span><span>SASS/SCSS</span><span>Tailwind CSS</span></div>
-                                </div>
-                                <div class="cv_skill_group">
-                                    <h4>Data &amp; Persistence</h4>
-                                    <div class="cv_skill_tags"><span>MySQL</span><span>PostgreSQL</span><span>Query Optimization</span><span>Indexing</span><span>Concurrency</span></div>
-                                </div>
-                                <div class="cv_skill_group">
-                                    <h4>Cloud &amp; Infrastructure</h4>
-                                    <div class="cv_skill_tags"><span>AWS S3</span><span>Cloud VMs</span><span>Docker</span><span>Linux</span><span>CI/CD</span></div>
-                                </div>
-                                <div class="cv_skill_group">
-                                    <h4>Security &amp; Reliability</h4>
-                                    <div class="cv_skill_tags"><span>JWT</span><span>OAuth2</span><span>RBAC</span><span>CSRF/XSS Mitigation</span><span>Rate Limiting</span></div>
-                                </div>
-                                <div class="cv_skill_group">
-                                    <h4>Real-Time &amp; Distributed</h4>
-                                    <div class="cv_skill_tags"><span>WebRTC</span><span>Socket.io</span><span>Event-Driven</span></div>
-                                </div>
-                                <div class="cv_skill_group">
-                                    <h4>Systems Integration</h4>
-                                    <div class="cv_skill_tags"><span>Payment Gateways</span><span>Google APIs</span><span>Webhooks</span><span>API-Oriented</span></div>
-                                </div>
-                                <div class="cv_skill_group">
-                                    <h4>Engineering Practices</h4>
-                                    <div class="cv_skill_tags"><span>Scalable Design</span><span>API-First</span><span>Secure Coding</span><span>Code Review</span><span>Agile</span><span>Remote Teams</span></div>
-                                </div>
-                                <div class="cv_skill_group">
-                                    <h4>Cross-Platform</h4>
-                                    <div class="cv_skill_tags"><span>Electron.js</span><span>Flutter</span></div>
-                                </div>
-                                <div class="cv_skill_group">
-                                    <h4>Communication</h4>
-                                    <div class="cv_skill_tags"><span>Bilingual</span><span>Proficient in English</span><span>Client Communication</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                            </div>
-                            <div class="about_tab_panel" id="tab-awards" role="tabpanel" hidden>
-                                <div class="tokyo_tm_testimonials cv_block cv_awards cv_block_tab">
-                        <div class="container">
-                            <h3 class="cv_block_title">Awards &amp; Recognition</h3>
-                            <div class="cv_award_list">
-                                <article class="cv_award_item">
-                                    <div class="cv_award_badge">Task Master</div>
-                                    <p class="cv_award_org">TRY SOLUTIONS LLC</p>
-                                    <p class="cv_award_text">Recognized for consistently achieving 100% task success and demonstrating exceptional dedication in fulfilling responsibilities. Outstanding performance in delivering results with precision and commitment.</p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -620,14 +708,16 @@
                                         <span class="contact_info_value">tahasinislam.x@gmail.com</span>
                                     </span>
                                 </a>
-                                <a href="https://linkedin.com/in/tahasinx" target="_blank" rel="noopener" class="contact_info_item">
+                                <a href="https://linkedin.com/in/tahasinx" target="_blank" rel="noopener"
+                                    class="contact_info_item">
                                     <span class="contact_info_icon"><i class="bi bi-linkedin"></i></span>
                                     <span class="contact_info_text">
                                         <span class="contact_info_label">LinkedIn</span>
                                         <span class="contact_info_value">linkedin.com/in/tahasinx</span>
                                     </span>
                                 </a>
-                                <a href="https://wa.me/8801521493074" target="_blank" rel="noopener" class="contact_info_item">
+                                <a href="https://wa.me/8801521493074" target="_blank" rel="noopener"
+                                    class="contact_info_item">
                                     <span class="contact_info_icon"><i class="bi bi-whatsapp"></i></span>
                                     <span class="contact_info_text">
                                         <span class="contact_info_label">WhatsApp</span>
@@ -646,7 +736,8 @@
                                                 <input id="name" type="text" placeholder="Name *">
                                             </li>
                                             <li>
-                                                <input id="email" type="email" placeholder="Email *" autocomplete="email">
+                                                <input id="email" type="email" placeholder="Email *"
+                                                    autocomplete="email">
                                             </li>
                                         </ul>
                                     </div>
@@ -654,7 +745,10 @@
                                         <textarea id="message" placeholder="Message *"></textarea>
                                     </div>
                                     <div class="contact_turnstile_wrap">
-                                        <div class="cf-turnstile" id="contact_turnstile" data-sitekey="0x4AAAAAACb55OXSVNiiCv2I" data-size="invisible" data-theme="auto" data-callback="onTurnstileSuccess" data-error-callback="contactTurnstileError"></div>
+                                        <div class="cf-turnstile" id="contact_turnstile"
+                                            data-sitekey="0x4AAAAAACb55OXSVNiiCv2I" data-size="invisible"
+                                            data-theme="auto" data-callback="onTurnstileSuccess"
+                                            data-error-callback="contactTurnstileError"></div>
                                     </div>
                                     <div class="tokyo_tm_button" data-position="left">
                                         <a id="send_message" href="#">
@@ -690,14 +784,17 @@
             <div class="cv_modal_box">
                 <header class="cv_modal_header">
                     <span class="cv_modal_title">Resume</span>
-                    <button type="button" class="cv_modal_btn cv_modal_btn_close" id="cv_modal_close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                    <button type="button" class="cv_modal_btn cv_modal_btn_close" id="cv_modal_close"
+                        aria-label="Close"><i class="bi bi-x-lg"></i></button>
                 </header>
                 <div class="cv_modal_body">
                     <iframe id="cv_preview_frame" title="CV Preview" src="about:blank"></iframe>
                     <div id="cv_modal_fallback" class="cv_modal_fallback" style="display: none;">
                         <p class="cv_modal_fallback_title">CV file not found</p>
-                        <p class="cv_modal_fallback_text">Add your PDF to <strong>assets/cv/CV [ Tahasin Islam ].pdf</strong> to see the preview here.</p>
-                        <p class="cv_modal_fallback_hint">Place your resume PDF in the <code>assets/cv</code> folder, then refresh the page.</p>
+                        <p class="cv_modal_fallback_text">Add your PDF to <strong>assets/cv/CV [ Tahasin Islam
+                                ].pdf</strong> to see the preview here.</p>
+                        <p class="cv_modal_fallback_hint">Place your resume PDF in the <code>assets/cv</code> folder,
+                            then refresh the page.</p>
                     </div>
                 </div>
             </div>
@@ -715,6 +812,7 @@
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script src="assets/js/init.js?v=1.0.1"></script>
     <script src="assets/js/email.js"></script>
+    <script src="assets/js/block-context.js"></script>
     <!-- /SCRIPTS -->
     <script>
         var typed = new Typed(".typing", {
