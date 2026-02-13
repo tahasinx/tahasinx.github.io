@@ -408,44 +408,104 @@ a {
 .tokyo_tm_mobile_menu {
 	position        : fixed;
 	top             : 50px;
-	right           : -200px;
-	height          : 100vh;
-	width           : 200px;
-	z-index         : 15;
+	right           : -280px;
+	height          : calc(100vh - 50px);
+	width           : 280px;
+	z-index         : 13;
 	background-color: #fff;
-
-	-webkit-transition: all .3s ease;
-	-moz-transition   : all .3s ease;
-	-ms-transition    : all .3s ease;
-	-o-transition     : all .3s ease;
-	transition        : all .3s ease;
+	display         : flex;
+	flex-direction  : column;
+	box-shadow      : -4px 0 24px rgba(0, 0, 0, .08);
+	-webkit-transition: right .3s cubic-bezier(0.4, 0, 0.2, 1);
+	-moz-transition   : right .3s cubic-bezier(0.4, 0, 0.2, 1);
+	-ms-transition    : right .3s cubic-bezier(0.4, 0, 0.2, 1);
+	-o-transition     : right .3s cubic-bezier(0.4, 0, 0.2, 1);
+	transition        : right .3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tokyo_tm_mobile_menu.opened {
-	right: 0px;
+	right: 0;
 }
 
-.tokyo_tm_mobile_menu .menu_list {
-	width     : 100%;
-	height    : auto;
-	clear     : both;
-	float     : left;
-	text-align: right;
-	padding   : 100px 20px 0px 20px;
+.tokyo_tm_mobile_menu .mobile_menu_header {
+	padding       : 24px 24px 20px 24px;
+	border-bottom : 1px solid rgba(0, 0, 0, .06);
+}
+.tokyo_tm_mobile_menu .mobile_menu_name {
+	display   : block;
+	font-size : 16px;
+	font-weight: 600;
+	color     : #000;
+	letter-spacing: 0.02em;
+}
+.tokyo_tm_mobile_menu .mobile_menu_role {
+	display   : block;
+	font-size : 12px;
+	color     : #666;
+	margin-top: 0.25rem;
 }
 
-.tokyo_tm_mobile_menu .menu_list ul {
-	margin         : 0px;
+.tokyo_tm_mobile_menu .menu_list.mobile_nav {
+	flex     : 1;
+	padding  : 24px 24px 20px;
+	text-align: left;
+	float     : none;
+}
+.tokyo_tm_mobile_menu .menu_list.mobile_nav ul {
+	margin         : 0;
 	list-style-type: none;
 }
-
-.tokyo_tm_mobile_menu .menu_list ul li {
-	margin: 0px 0px 7px 0px;
+.tokyo_tm_mobile_menu .menu_list.mobile_nav ul li {
+	margin: 0 0 2px 0;
+}
+.tokyo_tm_mobile_menu .menu_list.mobile_nav ul li a {
+	display     : flex;
+	align-items : center;
+	gap         : 0.75rem;
+	padding     : 12px 0;
+	color       : #000;
+	font-family : "Montserrat", sans-serif;
+	font-size   : 15px;
+	font-weight : 500;
+	letter-spacing: 0.02em;
+	border-bottom: 1px solid transparent;
+	transition  : color .2s, border-color .2s;
+}
+.tokyo_tm_mobile_menu .menu_list.mobile_nav ul li a:hover {
+	color: #333;
+	border-bottom-color: rgba(0, 0, 0, .08);
+}
+.tokyo_tm_mobile_menu .menu_list.mobile_nav ul li.active a {
+	font-weight: 600;
+	color: #000;
+}
+.tokyo_tm_mobile_menu .menu_list.mobile_nav .mobile_nav_num {
+	font-size   : 11px;
+	font-weight : 600;
+	color       : rgba(0, 0, 0, .35);
+	min-width   : 1.25rem;
+}
+.tokyo_tm_mobile_menu .menu_list.mobile_nav ul li a:hover .mobile_nav_num,
+.tokyo_tm_mobile_menu .menu_list.mobile_nav ul li.active a .mobile_nav_num {
+	color: rgba(0, 0, 0, .7);
 }
 
-.tokyo_tm_mobile_menu .menu_list ul li a {
-	color      : #000;
-	font-family: "Montserrat";
+.tokyo_tm_mobile_menu .mobile_menu_footer {
+	padding   : 20px 24px 32px;
+	border-top: 1px solid rgba(0, 0, 0, .06);
+}
+.tokyo_tm_mobile_menu .mobile_menu_footer p {
+	margin     : 0;
+	font-size  : 13px;
+	color      : #888;
+	line-height: 1.5;
+}
+.tokyo_tm_mobile_menu .mobile_menu_footer a {
+	color     : #555;
+	font-weight: 500;
+}
+.tokyo_tm_mobile_menu .mobile_menu_footer a:hover {
+	color: #000;
 }
 
 /*---------------------------------------------------*/
@@ -558,6 +618,96 @@ a {
 
 .tokyo_tm_all_wrap .leftpart .copyright a:hover {
 	color: #000;
+}
+
+/* Sidebar: elite developer UI */
+.tokyo_tm_all_wrap .leftpart .sidebar_profile {
+	display       : block;
+	margin-bottom : 1.5rem;
+	padding-bottom: 1.25rem;
+	border-bottom : 1px solid rgba(0, 0, 0, .08);
+}
+.tokyo_tm_all_wrap .leftpart .sidebar_name {
+	display   : block;
+	font-size : 15px;
+	font-weight: 600;
+	color     : #000;
+	letter-spacing: 0.02em;
+}
+.tokyo_tm_all_wrap .leftpart .sidebar_role {
+	display   : block;
+	font-size : 12px;
+	color     : #666;
+	margin-top: 0.25rem;
+}
+.tokyo_tm_all_wrap .leftpart .menu.cv_nav ul li a {
+	display     : flex;
+	align-items : center;
+	gap         : 0.6rem;
+	font-size   : 14px;
+	letter-spacing: 0.03em;
+}
+.tokyo_tm_all_wrap .leftpart .menu .nav_num {
+	font-size   : 11px;
+	font-weight : 600;
+	color       : rgba(0, 0, 0, .35);
+	min-width   : 1.25rem;
+}
+.tokyo_tm_all_wrap .leftpart .menu ul li a:hover .nav_num,
+.tokyo_tm_all_wrap .leftpart .menu ul li.active a .nav_num {
+	color: #000;
+}
+body.dark .tokyo_tm_all_wrap .leftpart .sidebar_profile { border-bottom-color: rgba(255,255,255,.08); }
+body.dark .tokyo_tm_all_wrap .leftpart .sidebar_name { color: #fff; }
+body.dark .tokyo_tm_all_wrap .leftpart .sidebar_role { color: #aaa; }
+
+/* Floating theme toggle (bottom-right) */
+.theme_float_btn {
+	position        : fixed;
+	bottom          : 24px;
+	right           : 24px;
+	z-index         : 999;
+	display         : flex;
+	align-items     : center;
+	justify-content : center;
+	width           : 48px;
+	height          : 48px;
+	padding         : 0;
+	border          : none;
+	border-radius   : 50%;
+	background      : #fff;
+	box-shadow      : 0 4px 20px rgba(0, 0, 0, .15), 0 2px 8px rgba(0, 0, 0, .08);
+	cursor          : pointer;
+	transition      : transform .2s, box-shadow .2s, background .2s;
+}
+.theme_float_btn:hover {
+	transform  : scale(1.06);
+	box-shadow : 0 6px 24px rgba(0, 0, 0, .18), 0 4px 12px rgba(0, 0, 0, .1);
+}
+.theme_float_btn:active { transform: scale(0.98); }
+.theme_float_btn .theme_float_icon {
+	font-size : 1.25rem;
+	color     : #333;
+	display   : flex;
+	align-items: center;
+	justify-content: center;
+}
+.theme_float_btn .theme_float_icon.moon { display: none; }
+.theme_float_btn .theme_float_icon.sun  { display: flex; }
+body.dark .theme_float_btn {
+	background : rgba(55, 58, 62, .95);
+	box-shadow : 0 4px 20px rgba(0, 0, 0, .35), 0 2px 8px rgba(0, 0, 0, .2);
+}
+body.dark .theme_float_btn:hover {
+	background : rgba(65, 68, 72, .98);
+	box-shadow : 0 6px 24px rgba(0, 0, 0, .4);
+}
+body.dark .theme_float_btn .theme_float_icon { color: #e0e0e0; }
+body.dark .theme_float_btn .theme_float_icon.moon { display: flex; }
+body.dark .theme_float_btn .theme_float_icon.sun  { display: none; }
+@media (max-width: 1040px) {
+	.theme_float_btn { bottom: 20px; right: 20px; width: 44px; height: 44px; }
+	.theme_float_btn .theme_float_icon { font-size: 1.1rem; }
 }
 
 /*---------------------------------------------------*/
@@ -908,6 +1058,240 @@ a {
 .tokyo_tm_info ul li a:hover {
 	color: #000;
 }
+
+/* CV section header (About) */
+.cv_section_header {
+	border-bottom : 1px solid #e8e8e8;
+	padding-bottom: 1.25rem;
+	margin-bottom  : 1.5rem;
+}
+.cv_section_label {
+	display   : block;
+	font-size : 11px;
+	font-weight: 600;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color     : #888;
+	margin-bottom: 0.35rem;
+}
+.cv_section_title {
+	font-size   : 26px;
+	font-weight : 700;
+	margin      : 0 0 0.2rem 0;
+	color       : #000;
+}
+.cv_section_subtitle {
+	font-size : 14px;
+	color    : #666;
+	margin   : 0;
+}
+body.dark .cv_section_header { border-bottom-color: rgba(255,255,255,.08); }
+body.dark .cv_section_label { color: #888; }
+body.dark .cv_section_title { color: #fff; }
+body.dark .cv_section_subtitle { color: #aaa; }
+
+/* CV block title (01, 02, 03, 04) */
+.cv_block { padding: 3rem 0; }
+.cv_block_title {
+	font-size   : 18px;
+	font-weight : 700;
+	margin      : 0 0 2rem 0;
+	display     : flex;
+	align-items : center;
+	gap         : 0.75rem;
+	color       : #000;
+}
+.cv_block_num {
+	font-size   : 12px;
+	font-weight : 600;
+	color       : rgba(0, 0, 0, .4);
+	letter-spacing: 0.05em;
+}
+body.dark .cv_block_title { color: #fff; }
+body.dark .cv_block_num { color: rgba(255,255,255,.5); }
+
+/* Timeline (Education + Experience) */
+.cv_timeline { position: relative; }
+.cv_timeline_item {
+	position     : relative;
+	padding-left : 1.5rem;
+	border-left  : 2px solid rgba(0, 0, 0, .08);
+	margin-left  : 0.35rem;
+	padding-bottom: 2.5rem;
+}
+.cv_timeline_item:last-child { padding-bottom: 0; }
+.cv_timeline_item::before {
+	content    : "";
+	position   : absolute;
+	left       : -6px;
+	top        : 0.4rem;
+	width      : 10px;
+	height     : 10px;
+	background : #000;
+	border-radius: 50%;
+}
+.cv_timeline_head {
+	display   : flex;
+	flex-wrap : wrap;
+	gap       : 0.5rem 1rem;
+	margin-bottom: 0.35rem;
+}
+.cv_timeline_date {
+	font-size : 13px;
+	color     : #666;
+}
+.cv_timeline_location {
+	font-size : 12px;
+	color     : #999;
+}
+.cv_timeline_heading {
+	font-size   : 17px;
+	font-weight : 600;
+	margin      : 0 0 0.2rem 0;
+	color       : #000;
+}
+.cv_timeline_org {
+	font-size : 14px;
+	margin   : 0 0 0.5rem 0;
+}
+.cv_timeline_org a {
+	color: #000;
+	font-weight: 600;
+	text-decoration: none;
+}
+.cv_timeline_org a:hover { text-decoration: underline; }
+.cv_org_meta {
+	display   : block;
+	font-size : 12px;
+	color     : #888;
+	font-weight: normal;
+}
+.cv_timeline_desc {
+	font-size  : 14px;
+	line-height: 1.6;
+	color     : #555;
+	margin    : 0.5rem 0 0 0;
+}
+body.dark .cv_timeline_item { border-left-color: rgba(255,255,255,.12); }
+body.dark .cv_timeline_item::before { background: #fff; }
+body.dark .cv_timeline_date { color: #aaa; }
+body.dark .cv_timeline_location { color: #777; }
+body.dark .cv_timeline_heading { color: #fff; }
+body.dark .cv_timeline_org a { color: #fff; }
+body.dark .cv_org_meta { color: #888; }
+body.dark .cv_timeline_desc { color: #bbb; }
+
+/* Experience bullets */
+.cv_experience_item { padding-bottom: 2.5rem; }
+.cv_bullets {
+	margin    : 0.75rem 0 0 0;
+	padding  : 0 0 0 1.1rem;
+	list-style: disc;
+	font-size : 14px;
+	line-height: 1.65;
+	color    : #555;
+}
+.cv_bullets li { margin-bottom: 0.4rem; }
+.cv_bullets li:last-child { margin-bottom: 0; }
+body.dark .cv_bullets { color: #bbb; }
+
+/* Skills grid */
+.cv_skills_block { padding: 3rem 0; }
+.cv_skills_grid {
+	display   : grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap       : 1.25rem;
+}
+.cv_skill_group {
+	background   : rgba(0, 0, 0, .03);
+	border       : 1px solid rgba(0, 0, 0, .06);
+	border-radius: 8px;
+	padding      : 1.1rem 1.25rem;
+	transition   : border-color .2s, background .2s;
+}
+.cv_skill_group:hover {
+	background   : rgba(0, 0, 0, .04);
+	border-color : rgba(0, 0, 0, .1);
+}
+.cv_skill_group h4 {
+	font-size   : 13px;
+	font-weight : 600;
+	margin      : 0 0 0.65rem 0;
+	color       : #000;
+	letter-spacing: 0.02em;
+}
+.cv_skill_tags {
+	display   : flex;
+	flex-wrap : wrap;
+	gap       : 0.4rem;
+}
+.cv_skill_tags span {
+	display   : inline-block;
+	font-size : 12px;
+	padding  : 0.3rem 0.6rem;
+	background: #fff;
+	border    : 1px solid rgba(0, 0, 0, .1);
+	border-radius: 4px;
+	color     : #444;
+}
+body.dark .cv_skill_group {
+	background: rgba(255, 255, 255, .04);
+	border-color: rgba(255, 255, 255, .08);
+}
+body.dark .cv_skill_group:hover {
+	background: rgba(255, 255, 255, .07);
+	border-color: rgba(255, 255, 255, .14);
+}
+body.dark .cv_skill_group h4 { color: #fff; }
+body.dark .cv_skill_tags span {
+	background: rgba(255, 255, 255, .06);
+	border-color: rgba(255, 255, 255, .12);
+	color: #ccc;
+}
+
+/* Awards */
+.cv_awards { padding: 3rem 0; }
+.cv_award_list { max-width: 640px; }
+.cv_award_item {
+	background   : rgba(0, 0, 0, .03);
+	border       : 1px solid rgba(0, 0, 0, .06);
+	border-radius: 10px;
+	padding      : 1.5rem 1.75rem;
+}
+.cv_award_badge {
+	display   : inline-block;
+	font-size : 12px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color     : #000;
+	margin-bottom: 0.5rem;
+	padding   : 0.35rem 0.75rem;
+	background: rgba(0, 0, 0, .07);
+	border-radius: 6px;
+}
+.cv_award_org {
+	font-size : 14px;
+	font-weight: 600;
+	margin   : 0 0 0.5rem 0;
+	color    : #333;
+}
+.cv_award_text {
+	font-size  : 14px;
+	line-height: 1.65;
+	color     : #555;
+	margin    : 0;
+}
+body.dark .cv_award_item {
+	background: rgba(255, 255, 255, .04);
+	border-color: rgba(255, 255, 255, .08);
+}
+body.dark .cv_award_badge {
+	color: #fff;
+	background: rgba(255, 255, 255, .12);
+}
+body.dark .cv_award_org { color: #ddd; }
+body.dark .cv_award_text { color: #bbb; }
 
 .tokyo_tm_progressbox {
 	width           : 100%;

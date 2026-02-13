@@ -140,9 +140,45 @@ body.dark .hamburger.is-active .hamburger-inner:before{
 	background-color: #fff;
 }
 body.dark .tokyo_tm_mobile_menu{
-	background-color: #494b50;
+	background-color: #34353a;
+	box-shadow: -4px 0 24px rgba(0, 0, 0, .3);
 }
-body.dark .tokyo_tm_mobile_menu .menu_list ul li a{
+body.dark .tokyo_tm_mobile_menu .mobile_menu_header{
+	border-bottom-color: rgba(255, 255, 255, .08);
+}
+body.dark .tokyo_tm_mobile_menu .mobile_menu_name{
+	color: #fff;
+}
+body.dark .tokyo_tm_mobile_menu .mobile_menu_role{
+	color: #aaa;
+}
+body.dark .tokyo_tm_mobile_menu .menu_list.mobile_nav ul li a{
+	color: #e0e0e0;
+}
+body.dark .tokyo_tm_mobile_menu .menu_list.mobile_nav ul li a:hover{
+	color: #fff;
+	border-bottom-color: rgba(255, 255, 255, .1);
+}
+body.dark .tokyo_tm_mobile_menu .menu_list.mobile_nav ul li.active a{
+	color: #fff;
+}
+body.dark .tokyo_tm_mobile_menu .menu_list.mobile_nav .mobile_nav_num{
+	color: rgba(255, 255, 255, .4);
+}
+body.dark .tokyo_tm_mobile_menu .menu_list.mobile_nav ul li a:hover .mobile_nav_num,
+body.dark .tokyo_tm_mobile_menu .menu_list.mobile_nav ul li.active a .mobile_nav_num{
+	color: rgba(255, 255, 255, .8);
+}
+body.dark .tokyo_tm_mobile_menu .mobile_menu_footer{
+	border-top-color: rgba(255, 255, 255, .08);
+}
+body.dark .tokyo_tm_mobile_menu .mobile_menu_footer p{
+	color: #888;
+}
+body.dark .tokyo_tm_mobile_menu .mobile_menu_footer a{
+	color: #aaa;
+}
+body.dark .tokyo_tm_mobile_menu .mobile_menu_footer a:hover{
 	color: #fff;
 }
 body.dark .tokyo_tm_button a{
