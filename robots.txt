@@ -1,0 +1,85 @@
+# robots.txt for Modern HTML5 Audio Player
+# This file controls how search engines crawl and index the player files
+
+User-agent: *
+# Allow main demo page
+Allow: /index.html
+Allow: /documentation.html
+
+# Allow documentation files for reference
+Allow: /README.md
+Allow: /LICENSE.md
+Allow: /LICENSE_ATTRIBUTIONS.md
+Allow: /CHANGELOG.md
+Allow: /ITEM_DESCRIPTION.md
+
+# Disallow source code files (protect code)
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Allow assets that should be indexed (icons, fonts are fine)
+Allow: /assets/icons/
+Allow: /assets/fonts/
+Allow: /assets/data/
+
+# Disallow demo audio tracks (replace with your own)
+Disallow: /assets/tracks/
+
+# Block aggressive scrapers and bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: Exabot
+Disallow: /
+
+User-agent: facebot
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+# Block HTTP header tools and scrapers
+User-agent: HTTPTrack
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: python-requests
+Disallow: /
+
+User-agent: scrapy
+Disallow: /
+
+# Crawl-delay for all bots (optional - remove if you want faster crawling)
+# Crawl-delay: 10
+
+# Sitemap (if available)
+# Sitemap: https://yourdomain.com/sitemap.xml
