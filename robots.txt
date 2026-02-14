@@ -77,9 +77,3 @@ Disallow: /
 
 User-agent: scrapy
 Disallow: /
-
-# Crawl-delay for all bots (optional - remove if you want faster crawling)
-# Crawl-delay: 10
-
-# Sitemap (if available)
-# Sitemap: https://yourdomain.com/sitemap.xml
