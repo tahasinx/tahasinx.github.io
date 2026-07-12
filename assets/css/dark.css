@@ -422,6 +422,20 @@ body.dark .tokyo_tm_partners .partners_inner{
 body.dark .tokyo_tm_partners ul li{
 	border-color: #56585c;
 }
+body.dark .tokyo_tm_services .service_highlights {
+	border-color: rgba(255, 255, 255, .12);
+}
+body.dark .tokyo_tm_services .service_highlights ul li {
+	border-right-color: rgba(255, 255, 255, .12);
+}
+
+@media (max-width: 1040px) {
+	body.dark .tokyo_tm_services .service_highlights ul li {
+		border-right : none;
+		border-bottom-color: rgba(255, 255, 255, .12);
+	}
+}
+
 body.dark .tokyo_tm_facts .list ul li .list_inner{
 	border-color: #56585c;
 }
