@@ -2018,43 +2018,54 @@ body.dark .cv_award_text { color: #bbb; }
 }
 
 .tokyo_tm_services .service_highlights {
-	width         : 100%;
-	margin-bottom : 50px;
-	border        : 1px solid rgba(0, 0, 0, .12);
+	width        : 100%;
+	height       : auto;
+	clear        : both;
+	float        : left;
+	margin-bottom: 50px;
+	overflow     : hidden;
 }
 
 .tokyo_tm_services .service_highlights ul {
-	display        : flex;
-	flex-wrap      : wrap;
-	margin         : 0;
+	margin         : 0 0 0 -20px;
 	padding        : 0;
 	list-style-type: none;
+	width          : calc(100% + 20px);
+	float          : left;
 }
 
 .tokyo_tm_services .service_highlights ul li {
-	flex      : 1 1 33.333%;
-	min-width : 160px;
+	float       : left;
+	width       : 33.333%;
+	padding-left: 20px;
+	margin      : 0;
+	box-sizing  : border-box;
+}
+
+.tokyo_tm_services .service_highlights .highlight_item {
+	width     : 100%;
+	float     : left;
+	clear     : both;
 	text-align: center;
 	padding   : 28px 16px;
-	border-right: 1px solid rgba(0, 0, 0, .12);
+	border    : 1px solid rgba(0, 0, 0, .12);
+	box-sizing: border-box;
 }
 
-.tokyo_tm_services .service_highlights ul li:last-child {
-	border-right: none;
-}
-
-.tokyo_tm_services .service_highlights .list_inner h3 {
+.tokyo_tm_services .service_highlights .highlight_item h3 {
 	font-size     : 32px;
 	font-weight   : 800;
-	margin-bottom : 4px;
+	margin        : 0 0 4px 0;
 	line-height   : 1.2;
+	float         : none;
 }
 
-.tokyo_tm_services .service_highlights .list_inner span {
+.tokyo_tm_services .service_highlights .highlight_item span {
 	font-size  : 14px;
 	opacity    : .75;
 	display    : block;
 	line-height: 1.4;
+	float      : none;
 }
 
 .tokyo_tm_services .list {
@@ -4083,14 +4094,19 @@ body.modal {
 		padding-left: 0px;
 	}
 
+	.tokyo_tm_services .service_highlights ul {
+		margin: 0;
+		width : 100%;
+	}
+
 	.tokyo_tm_services .service_highlights ul li {
-		flex         : 1 1 100%;
-		border-right : none;
-		border-bottom: 1px solid rgba(0, 0, 0, .12);
+		width        : 100%;
+		padding-left : 0;
+		margin-bottom: 12px;
 	}
 
 	.tokyo_tm_services .service_highlights ul li:last-child {
-		border-bottom: none;
+		margin-bottom: 0;
 	}
 
 	.tokyo_tm_partners ul li {
